@@ -4,27 +4,32 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/f7d936f6fb.js" crossorigin="anonymous"></script>
   <title>Hector Romero | Portafolio</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="src/style.css">
+  <link rel="icon" href="./src/images/favicon.ico" type="image/x-icon">
 </head>
-<body>
+<body> 
 
   <section class="hero">
     <nav>
       <img class="logo" src="src//images/logo.png" alt="Hector Romero's logo"/>
-      <ul>
-        <li>About me</li>
-        <li>Projects</li>
-        <li>Contact me</li>
+      <ul id="nav-list">
+        <li><a href="#about-me">About me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact-me">Contact me</a></li>
       </ul>
+      <button class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </button>
     </nav>
     <div class="hero-area">
       <div class="hero-text">
         <h1>Hector Romero</h1>
         <p>Frontend developer</p>
-        <a href="#" class="btn">About me</a>
+        <a href="#about-me" class="btn">About me</a>
       </div>
       <div class="socials">
         <a href="https://twitter.com/hectorromerodev" target="_blank" class="social">
@@ -47,33 +52,63 @@
     </div>
   </section>
 
-  <section class="sub-section-area split">
+  <section class="sub-section-area" id="about-me">
     <div>
       <h2>About me</h2>
       <p>
-        Hello, My name is Hector Romero, I'm software developer and podcast producer with passion for teaching.
+        Hello, My name is Hector Romero, I'm software developer and podcast producer with passion for teaching and learning.
       </p>
     </div>
-    <img class="headshot" src="./src/images/profile_400x400.jpg" alt="Hector Romero Headshot"/>
-    <!-- <div class="headshot-container">
-    </div> -->
+    <div class="headshot-container">
+      <img class="headshot" src="./src/images/profile_400x400.jpg" alt="Hector Romero Headshot"/>
+    </div>
   </section>
 
-  <section class="sub-section-alternative">
-    <div>
-      <h2>
-        Projects
-      </h2>
-    </div>
+  <section class="sub-section-alternative" id="projects">
+    <h2>
+      Projects
+    </h2>
     <div class="project-container">
-      <div class="project-card"></div>
-      <div class="project-card"></div>
-      <div class="project-card"></div>
-      <div class="project-card"></div>
+      <div class="project-card">
+        <img src="./src/images/project1.jpg" alt="Dulcesa Project" class="project-image">
+        <h3>Dulcesa</h3>
+        <p class="subtext">Awesome Landing page, to land all customers and call to action with WhatsApp Business phone.</p>
+        <hr>
+        <a href="https://github.com/hectorromerodev" target="_blank" class="project-link">View here</a>
+      </div>
+
+      <div class="project-card">
+        <img src="./src/images/project2.jpg" alt="Coming soon image" class="project-image">
+        <h3>Checkup Tools</h3>
+        <p class="subtext">A simple business app to checkup entrance and departure, with cloud storage and location implemented.</p>
+        <hr>
+        <a href="https://play.google.com/store/apps/details?id=www.siil.mx" target="_blank" class="project-link">View here</a>
+      </div>
+
+      <div class="project-card">
+        <img src="./src/images/project3.jpg" alt="Coming soon image" class="project-image">
+        <h3>Meraki Developer</h3>
+        <p class="subtext">Meraki Developer website and call to action with contact form submit.</p>
+        <hr>
+        <a href="https://merakideveloper.com" target="_blank" class="project-link">View here</a>
+      </div>
+
+      <div class="project-card">
+        <img src="./src/images/soon.png" alt="Coming soon image" class="project-image">
+        <h3>Project 4</h3>
+        <p class="subtext">Awesome project</p>
+        <hr>
+        <a href="https://github.com/hectorromerodev" target="_blank" class="project-link">View here</a>
+      </div>
     </div>
   </section>
 
-  <footer></footer>
+  <footer class="footer" id="contact-me">
+    <h2>Contact me</h2>
+    <p>
+      <a href="mailto:hector@merakideveloper.com" target="_blank">hector@merakideveloper.com</a>
+    </p>
+  </footer>
 
   <script src="src/app.js"> </script>
 </body>
