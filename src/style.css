@@ -1,0 +1,294 @@
+@import './colors.css';
+
+/* On all projects i need to add this to use rem */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  /* padding: 0; */
+}
+
+/* ------SCROLLBAR------ */
+::-webkit-scrollbar{
+  width: 1.2em;
+}
+
+::-webkit-scrollbar-track{
+  background: var(--bg-color);
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb{
+  background: var(--accent-color);
+  border-radius: 2.5em;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background: var(--accent-color);
+}
+
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 1.6;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+}
+ul{
+  display: flex;
+  list-style-type: none;
+  width: 500px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+li{
+  list-style: none;
+  font-size: clamp(1.5rem, 5vw + 1rem, 2.5rem);;
+}
+
+section{
+  background-color: var(--text-color);
+}
+
+p{
+  font-weight: 300;
+  font-size: clamp(.2rem, 5vw + .5rem, 2rem);
+}
+
+h1{
+  font-size: clamp(4rem, 5vw + 1rem, 8rem);
+}
+
+h2{
+  font-size: clamp(3rem, 5vw + .8rem, 4.5rem);
+}
+
+h3{
+  font-size: clamp(2rem, 5vw + .6rem, 2.5rem);
+  line-height: 2;
+}
+
+hr{
+  margin: 0 20px;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+footer {
+  height: 500px;
+  background-color: black;
+  padding: 10em clamp(.1em, 5vw + .5em, 1.5em);
+  text-align: center;
+  color: white;
+}
+
+.logo{
+  height: 2em;
+  margin: .5em;
+  font-size: clamp(1rem, 5vw + 1rem, 4.5rem);
+}
+
+.hero {
+  background-color: var(--bg-color);
+  height: 100vh;
+  color: var(--text-color);
+}
+
+.hero p{
+  font-weight: 400;
+  font-size: clamp(.5rem, 5vw + 1rem, 3.5rem);
+}
+
+.hero-area{
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5EM;
+}
+
+.hero-text{
+  margin-left: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.socials{
+  margin-bottom: 1.5em;
+}
+
+.social{
+  display: block;
+  text-decoration: none;
+  color: var(--text-color);
+  margin: .5em;
+  text-align: center;
+  transition:
+    transform 250ms ease-in-out,
+    opacity 250ms linear;
+  font-size: clamp(1rem, 5vw + 1rem, 4.5rem);
+
+}
+
+.social > svg {
+  width: 1.3em;
+  height: 1.3em;
+  fill: var(--icon-color);
+}
+
+.social:hover{
+  transform: scale(1.3);
+  opacity: .9;
+  cursor:pointer;
+}
+
+.btn{
+  display: inline-block;
+  text-decoration: none;
+  color: var(--text-color);
+  /* text-transform: uppercase; */
+  font-weight: 400;
+  font-size: clamp(1.5rem, 5vw + 1rem, 3.5rem);
+  padding: .2em .7em;
+  margin-top: .5em;
+  text-align: center;
+  background: var(--accent-color);
+  border-radius: 2.5em;
+  transition:
+    transform 250ms ease-in-out,
+    opacity 250ms linear;
+}
+
+.btn:hover,
+.btn:focus{
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.sub-section-area{
+  display: flex;
+  /* height: 100%; */
+  /* justify-content: space-around; */
+  align-items: center;
+  /* justify-content: space-around;*/
+  /* margin-left: 1.5em; */
+  padding: 10em clamp(.1em, 5vw + .5em, 1.5em);
+}
+
+.headshot{
+  min-width: 200px;
+  min-height: 200px;
+  max-width: 20vw;
+  max-height: 20vw;
+  border-radius: 50%;
+}
+
+.headshot-container{
+  display: flex;
+  min-width: 200px;
+}
+.sub-section-alternative{
+  display: block;
+  text-align: center;
+  /* margin-left: 1.5em; */
+  padding: clamp(.1em, 5vw + 1em, .7em);
+}
+.project-container{
+  padding: 10em clamp(.1em, 5vw + .5em, 1.5em);
+  display: flex;
+  justify-content: center;
+}
+.project-card{
+  margin: 1em;
+  width: 300px;
+  height: 600px;
+  box-shadow: 5px 5px 20px rgb(200, 196, 196);
+}
+
+.project-image{
+  margin: 1em;
+  width: 250px;
+  border-radius: 125px;
+}
+
+.subtext{
+  height: 220px;
+  text-align: center;
+  padding: 0 .2em;
+}
+
+.project-link{
+  text-decoration: none;
+  font-weight: 300;
+  font-size: clamp(.2rem, 5vw + .5rem, 2rem);
+  color: var(--accent-color);
+}
+ 
+.project-link:hover{
+  color: rgb(210, 105, 66);
+}
+
+.hamburger{
+  display: none;
+}
+
+.hamburger:focus{
+  outline: 0;
+}
+
+.hamburger:active{
+
+}
+
+
+@media only screen and (max-width: 67em){
+  nav{
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: var(--menu-color);
+  }
+
+  ul{
+    display: none;
+    background-color: var(--menu-color);
+    margin: 0;
+  }
+
+  ul.show{
+    display: block;
+  }
+
+  .logo{
+    display: none;
+  }
+  
+  .hamburger{
+    display: block;
+    border: 0;
+    background-color: transparent;
+    color: white;
+    font-size: clamp(2rem, 5vw + 1rem, 4.5rem);
+    margin: .4em;
+    align-self: flex-end;
+  }
+  .project-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+  }
+
+
+
+
+
+}
